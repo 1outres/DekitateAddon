@@ -20,11 +20,6 @@ public class MixinMinecraft {
         DekitateAddonClient.EVENT_BUS.post(new TickEvent());
     }
 
-    @Inject(method = "printCrashReport", at = @At("HEAD"))
-    private static void printCrashReport(CallbackInfo callbackInfo) {
-        DekitateAddonClient.INSTANCE.saveConfig.save();
-    }
-
     @Inject(method = "stop", at = @At("HEAD"))
     private void stop(CallbackInfo callbackInfo) {
         DekitateAddonClient.INSTANCE.saveConfig.save();
