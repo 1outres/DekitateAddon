@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "dsa",
+  "version": "${version}",
+  "name": "DekitateAddon",
+  "description": "DekitateServer Addon",
+  "authors": [
+    "cron"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/dsa/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "jp.cron.dsa.DekitateAddonClient"
+    ],
+    "main": [
+      "jp.cron.dsa.DekitateAddon"
+    ]
+  },
+  "mixins": [
+    "dsa.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.10",
+    "fabric": "*",
+    "minecraft": "1.19.2"
+  }
+}

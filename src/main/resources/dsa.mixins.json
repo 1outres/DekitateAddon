@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "jp.cron.dsa.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "network.MixinClientConnection",
+    "network.MixinClientLoginNetworkHandler"
+  ],
+  "client": [
+    "client.MixinMinecraft",
+    "gui.MixinChatHud"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
